@@ -3,28 +3,21 @@ namespace remove_duplicates_from_sorted_array_ii
     public class Solution 
 {
         public int RemoveDuplicates(int[] nums) {
-            int k = 1;
-
-            int previousElement = nums[0];
-            int instancesOfElement = 1;
-
-            for(var i = 1;i < nums.Length;i++)
+            if (nums.Length <= 2)
             {
-                if(previousElement == nums[i] && instancesOfElement < 2)
+                return nums.Length;
+            }
+
+            int k = 2;
+
+            for (var i = 2;i < nums.Length;i++)
+            {
+                if(nums[i] != nums[k - 2])
                 {
-                    instancesOfElement++;
-                    k++;
-                }
-                else if(previousElement != nums[i])
-                {
-                    previousElement = nums[i];
-                    nums[k] = previousElement;
-                    instancesOfElement = 1;
+                    nums[k] = nums[i];
                     k++;
                 }
             }
-            // covers the last element
-            if (instancesOfElement == 2) nums[k -1] = previousElement;
 
             return k;
         }
