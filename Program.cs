@@ -4,5 +4,7 @@
 // Console.WriteLine("--------------------------------------------------");
 // Console.WriteLine("Running remove_duplicates_from_sorted_array_ii");
 // remove_duplicates_from_sorted_array_ii.Runner.Run();
-Console.WriteLine("Running product_of_array_except_self");
-product_of_array_except_self.Runner.Run();
+// Console.WriteLine("Running product_of_array_except_self");
+// product_of_array_except_self.Runner.Run();
+Console.WriteLine("Running zigzag_conversion");
+zigzag_conversion.Runner.Run();
